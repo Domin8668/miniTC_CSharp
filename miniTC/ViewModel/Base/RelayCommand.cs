@@ -27,11 +27,10 @@ namespace miniTC.ViewModel
             this.canExecute = canExecute;
         }
 
-
         public bool CanExecute(object parameter)
         {
 
-            return canExecute == null ? true : canExecute(parameter);
+            return canExecute == null || canExecute(parameter);
         }
 
         public void Execute(object parameter)
